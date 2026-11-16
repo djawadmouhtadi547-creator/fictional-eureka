@@ -165,7 +165,7 @@ public final class TrickEngine {
                         DarkNullMod.LOGGER.warn("Ignoring malformed DARKNULL plot recovery tag: {}", tag);
                     }
                 }
-                player.removeCommandTag(tag);
+                player.removeScoreboardTag(tag);
             }
         }
         if (player.getServerWorld().getRegistryKey().equals(DARKNULL_WORLD)) {
@@ -183,7 +183,7 @@ public final class TrickEngine {
     }
 
     private static void forgetPlot(ServerPlayerEntity player, BlockPos center) {
-        player.removeCommandTag("darknull06_plot_" + center.getX() + "_" + center.getZ());
+        player.removeScoreboardTag("darknull06_plot_" + center.getX() + "_" + center.getZ());
     }
 
     public static void stopAll(MinecraftServer server) {
