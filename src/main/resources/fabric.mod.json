@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "darknull06",
+  "version": "${version}",
+  "name": "DARKNULL-06",
+  "description": "A non-Euclidean horror and reality-illusion toolkit for Minecraft 1.20.1.",
+  "authors": [
+    "djawad1"
+  ],
+  "contributors": [
+    "DARKNULL-06 contributors"
+  ],
+  "license": "All-Rights-Reserved",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.djawad1.darknull.DarkNullMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*"
+  }
+}

@@ -1,0 +1,25 @@
+DARKNULL-06 v0.2.0 source package
+Target: Minecraft Java 1.20.1 / Fabric / Java 17
+
+Included:
+- Fabric Loom project and Gradle 8.6 bootstrap scripts
+- Private void dimension data
+- Numbered room builders and server-side illusion session engine
+- Tutorial, commands, cleanup, disconnect handling, and crash recovery tags
+- GitHub Actions build workflow
+
+Not included:
+- No JAR is claimed as built or tested.
+
+Reason:
+The isolated build environment has no Gradle installation and no dependency cache. Internet/dependency downloads are unavailable here, so a real Gradle build could not be run. A standalone javac syntax pass found no Java parser errors, but Minecraft/Fabric symbols cannot be type-checked without the dependencies.
+
+Build on a machine with JDK 17 and network access:
+Windows: gradlew.bat --no-daemon clean build
+Linux/macOS: ./gradlew --no-daemon clean build
+
+Expected output directory: build/libs/
+Run the GitHub Actions workflow to build and upload the JAR artifact.
+
+Known gameplay limitation:
+Trick 9 is a ceiling-side spatial illusion, not a complete inverted-gravity physics/camera implementation. Trick 6 uses a mannequin reflection rather than a full duplicated player renderer.
